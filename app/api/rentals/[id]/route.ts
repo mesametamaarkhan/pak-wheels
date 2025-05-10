@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/db/connectDB";
 import RentalRequest from "@/models/RentalRequest";
-import Car from "@/models/Car";
-import User from "@/models/User";
 
 //route to get specific rental requests
 export async function GET(req: Request, { params }: { params: { id: string } }) {

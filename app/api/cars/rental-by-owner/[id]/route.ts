@@ -3,23 +3,10 @@ import connectDB from "@/db/connectDB";
 
 // Models
 import Car from "@/models/Car";
-import User from "@/models/User";
 
 // Next.js
 import { NextResponse } from "next/server";
 
-// Interfaces
-interface CarRequest {
-    ownerId: string;
-    title: string;
-    description?: string;
-    location: string;
-    price?: number;
-    pricePerDay?: number;
-    images: string[];
-    isForSale?: boolean;
-    isForRent?: boolean;
-};
 
 export async function GET(req: Request, { params }: { params: { id: string } }) {
     try {

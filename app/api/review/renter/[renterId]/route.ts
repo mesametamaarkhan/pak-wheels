@@ -14,6 +14,6 @@ export async function GET(req: Request, { params }: { params: { renterId: string
         return NextResponse.json({ reviews }, { status: 200 });
     } 
     catch (error) {
-        return NextResponse.json({ message: "Error fetching car reviews." }, { status: 500 });
+        return NextResponse.json({ message: "Error fetching car reviews.", error }, { status: 500 });
     }
 };
