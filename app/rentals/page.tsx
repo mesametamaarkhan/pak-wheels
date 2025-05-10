@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { MapPin, Calendar, DollarSign, Car, X } from "lucide-react";
+import { MapPin, DollarSign, Car, X } from "lucide-react";
 
 interface RentalCar {
   _id: string;
@@ -61,7 +61,8 @@ const RentalsPage = () => {
         endDate: rentalForm.endDate,
         totalPrice: rentalForm.totalPrice,
       });
-
+      
+      console.log(response.data);
       toast.success("Rental request submitted successfully!");
       setSelectedCar(null);
       setRentalForm({
