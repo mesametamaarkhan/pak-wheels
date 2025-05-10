@@ -51,7 +51,7 @@ interface RentalCar {
 }
 
 interface SectionState {
-  data: any[];
+  data: unknown[];
   loading: boolean;
   error: string | null;
 }
